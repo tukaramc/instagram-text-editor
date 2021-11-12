@@ -133,12 +133,12 @@ class _TextEditorState extends State<TextEditor> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // TextAlignment(
-                      //   left: widget.decoration?.alignment?.left,
-                      //   center: widget.decoration?.alignment?.center,
-                      //   right: widget.decoration?.alignment?.right,
-                      // ),
-                      // SizedBox(width: 20),
+                      TextAlignment(
+                        left: widget.decoration?.alignment?.left,
+                        center: widget.decoration?.alignment?.center,
+                        right: widget.decoration?.alignment?.right,
+                      ),
+                      SizedBox(width: 20),
                       FontOptionSwitch(
                         fontFamilySwitch: widget.decoration?.fontFamily,
                         colorPaletteSwitch: widget.decoration?.colorPalette,
