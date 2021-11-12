@@ -29,7 +29,8 @@ class FontOptionModel extends ChangeNotifier {
 
     // Map fonts to fontFamilyModel
     this.fonts = fonts
-        .map((font) => FontFamilyModel(font, font == selectedFont))
+        .map((font) => FontFamilyModel(
+            font, (font == selectedFont.replaceAll('_regular', ''))))
         .toList();
 
     // Set default colors
