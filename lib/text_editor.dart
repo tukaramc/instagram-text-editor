@@ -53,7 +53,6 @@ class TextEditor extends StatefulWidget {
 
   final double? minFontSize;
   final double? maxFontSize;
-  final bool showFontSizeTool;
 
   /// Create a [TextEditor] widget
   ///
@@ -71,7 +70,6 @@ class TextEditor extends StatefulWidget {
     this.textAlingment,
     this.minFontSize = 1,
     this.maxFontSize = 100,
-    this.showFontSizeTool = true,
     this.onTextAlignChanged,
     this.onTextStyleChanged,
     this.onTextChanged,
@@ -168,14 +166,10 @@ class _TextEditorState extends State<TextEditor> {
             Expanded(
               child: Row(
                 children: [
-                  widget.showFontSizeTool
-                      ? FontSize(
-                          minFontSize: widget.minFontSize!,
-                          maxFontSize: widget.maxFontSize!,
-                        )
-                      : Container(
-                          width: 20,
-                        ),
+                  FontSize(
+                    minFontSize: widget.minFontSize!,
+                    maxFontSize: widget.maxFontSize!,
+                  ),
                   Expanded(
                     child: Container(
                       child: Center(
